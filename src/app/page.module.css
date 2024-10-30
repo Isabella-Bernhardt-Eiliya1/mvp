@@ -6,6 +6,7 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #c5b629;
 
+  /* background-color: #F86B00; */
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
@@ -44,13 +45,18 @@
 .description {
   font-size: 1rem;
   text-align: center;
-  color: var(--gray-alpha-200);
+  color:black;
 }
 
 .form {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 15px;
 }
 
 .label {
@@ -89,6 +95,23 @@
 
 .submitButton:hover {
   background-color: var(--button-primary-hover);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  gap: 10px; /* Adds space between the image and the text */
+}
+
+
+.videoContainer {
+  text-align: center; 
+  margin: 20px 0;   
+}
+
+.video {
+  max-width: 150%;   
+  height: auto;     
 }
 
 /* Responsive adjustments */

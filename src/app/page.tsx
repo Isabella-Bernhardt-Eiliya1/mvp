@@ -1,10 +1,11 @@
 "use client"; // Add this line at the very top
 
 import Image from "next/image";
+import nomadlogo from './images/nomadlogo.svg';
 import { useState } from "react";
 import styles from "./page.module.css";
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxabQz3kc1YOftVXJeM-4O3yxVxRSPtn_b_bImU0Tqsrq3V47gVr2iI4YK7FKV3ZghE/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzq_jwaus2-KnMxrNFTRgdCjPyHdOlkBCYROY_JzdHVEsFKfNEQ7zgKrULYb2NTqLNz/exec';
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -37,12 +38,28 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Join the Nomad Waitlist</h1>
-        <p className={styles.description}>
-          Sign up to be notified when we launch!
-        </p>
+      <div className={styles.logoContainer}>
+      <div className={styles.logoWrapper}>
+      <Image src={nomadlogo} alt="Nomad Logo" width={100} height={100} />
+      </div>
+      <h1>Nomad</h1>
+      </div>
+      <p> A platform to streamline the international relocation process, starting with VISA applications.</p>
+      <div className={styles.videoContainer}>
+          <video
+            className={styles.video}
+            controls
+            width="800" 
+            height="600" 
+          >
+            <source src="/NomadMVPDemo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
         <form className={styles.form} onSubmit={handleSubmit}>
+        
+        <h3 className={styles.title}>Join the Nomad Waitlist</h3>
           <label htmlFor="Name" className={styles.label}>
             Name:
           </label>
