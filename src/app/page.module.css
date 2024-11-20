@@ -6,15 +6,15 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #c5b629;
 
-  /* background-color: #F86B00; */
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
+  display: flex; /* Changed from grid to flex for easier centering */
+  flex-direction: column; /* Column layout */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  min-height: 100vh; /* Full viewport height */
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background-color: #6091A3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,21 +31,31 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center items horizontally */
   gap: 32px;
-  grid-row-start: 2;
-  max-width: 400px;
+  max-width: 500px; /* Increased for better spacing */
   width: 100%;
+  color:white;
+}
+
+.platform{
+  text-align:center;
+}
+
+.vivatitle{
+  color:white;
 }
 
 .title {
   font-size: 2rem;
   text-align: center;
+  color:black;
 }
 
 .description {
   font-size: 1rem;
   text-align: center;
-  color:black;
+  color: black;
 }
 
 .form {
@@ -53,7 +63,8 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 500px;
+  width: 100%; /* Full width for better responsiveness */
+  max-width: 500px; /* Consistent with main */
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -101,8 +112,8 @@
   display: flex;
   align-items: center; /* Aligns items vertically in the center */
   gap: 10px; /* Adds space between the image and the text */
+  justify-content: center; /* Center logo container */
 }
-
 
 .videoContainer {
   text-align: center; 
@@ -110,7 +121,7 @@
 }
 
 .video {
-  max-width: 150%;   
+  max-width: 100%; /* Make the video responsive */
   height: auto;     
 }
 

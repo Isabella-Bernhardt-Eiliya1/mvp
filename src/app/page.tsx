@@ -1,7 +1,7 @@
 "use client"; // Add this line at the very top
 
 import Image from "next/image";
-import nomadlogo from './images/nomadlogo.svg';
+import vivalogo from './images/vivalogo.svg';
 import { useState } from "react";
 import styles from "./page.module.css";
 
@@ -40,16 +40,21 @@ export default function Home() {
       <main className={styles.main}>
       <div className={styles.logoContainer}>
       <div className={styles.logoWrapper}>
-      <Image src={nomadlogo} alt="Nomad Logo" width={100} height={100} />
+      <Image src={vivalogo} alt="viva logo" width={100} height={100} />
       </div>
-      <h1>Nomad</h1>
+      <div className = {styles.vivatitle}>
+         <h1 >Viva</h1>
       </div>
-      <p> A platform to streamline the international relocation process, starting with VISA applications.</p>
+      </div>
+      <div>
+      <p > Making it easy for small restaurants to tap into the powerful force of marketing.</p>
+      </div>
+      <div className ={styles.videoform}>
       <div className={styles.videoContainer}>
           <video
             className={styles.video}
             controls
-            width="800" 
+            width="1000" 
             height="600" 
           >
             <source src="/NomadMVPDemo.mp4" type="video/mp4" />
@@ -59,7 +64,7 @@ export default function Home() {
 
         <form className={styles.form} onSubmit={handleSubmit}>
         
-        <h3 className={styles.title}>Join the Nomad Waitlist</h3>
+        <h3 className={styles.title}>Join the Viva Waitlist</h3>
           <label htmlFor="Name" className={styles.label}>
             Name:
           </label>
@@ -96,6 +101,7 @@ export default function Home() {
             Join Waitlist
           </button>
         </form>
+        </div>
       </main>
     </div>
   );
